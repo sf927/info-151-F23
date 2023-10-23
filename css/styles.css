@@ -395,9 +395,13 @@ textarea {
 /* =============
     Header
 ============= */
-header {
+header nav ul #trial a {
   background-color: var(--primary);
+  color: var(--white);
+  padding: 20px 25px;
+  border-radius: 6px;
 }
+
 /* =============
     Footer
 ============= */

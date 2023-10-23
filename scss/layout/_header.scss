@@ -2,19 +2,22 @@
     Header
 ============= */
 header{
-    background-color: var(--primary);
+
 
     nav{
         ul{
             li{
                 a{
-                    
+                
                 }   
             }
 
             #trial{
                 a{
-                    
+                    background-color: var(--primary);
+                    color: var(--white);
+                    padding: 20px 25px;
+                    border-radius: 6px;  
                 }
             } 
         }
