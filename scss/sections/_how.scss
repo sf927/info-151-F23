@@ -1,0 +1,40 @@
+/* =============
+    How
+============= */
+#how{
+
+    div{
+        h1{
+            color: var(--black);
+        }
+    }
+
+    p{
+        color: var(--gray);
+    }
+
+    ul{
+        li{
+            display: inline-block;
+
+            
+            border-radius: 14px;
+
+            background: rgb(247,247,251);
+            background: linear-gradient(90deg, rgba(247,247,251,1) 0%, rgba(6,6,64,0.5) 0%);
+            padding: 1px;
+            div{
+                background-color: var(--white);
+                border-radius: 14px;
+                padding: 30px;
+                img{
+                    margin-bottom: 50px;
+                }
+                h2{
+                    color: var(--black);
+                }
+            }
+            
+        }
+    }
+}

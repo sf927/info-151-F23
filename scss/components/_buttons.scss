@@ -1,3 +1,13 @@
 /* =============
     Buttons
 ============= */
+button{
+    border: none;
+}
+
+.try-btn{
+    background-color: var(--primary);
+    color: var(--black);
+    padding: 20px 25px;
+    border-radius: 6px;
+}
