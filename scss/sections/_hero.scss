@@ -3,4 +3,23 @@
 ============= */
 #hero{
    margin-top: 100px;
+
+   section{
+
+    h1{
+        // font-family: 'PT Sans', sans-serif;
+        font-size: rem-calc(62);
+        color: var(--white);
+       }
+
+
+    #hero-content{
+        p{
+            font-size: rem-calc(18);
+        }
+    }
+
+   } 
+   
+
 }
