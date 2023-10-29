@@ -337,6 +337,10 @@ body {
   background-color: var(--linear);
 }
 
+#validation-btn {
+  margin-top: 100px;
+}
+
 /* =============
     Typography
 ============= */
@@ -360,6 +364,7 @@ ul {
 ============= */
 button {
   border: none;
+  cursor: pointer;
 }
 
 .blue-buttom {
@@ -393,14 +398,47 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 28px;
+}
+nav ul li a:link, nav ul li a:visited {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 300;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+nav ul li a:hover, nav ul li a:active {
+  color: var(--blue);
+}
+nav ul li a.selected {
+  color: var(--blue);
+}
+nav ul #trial-btn {
+  margin-left: auto;
+}
+
 /* =============
     Header
 ============= */
 header {
   margin-bottom: 70px;
-}
-header nav ul li a {
-  font-size: 1.125rem;
+  padding: 22px;
+  border-radius: 6px;
+  margin-top: 59px;
 }
 
 /* =============
@@ -411,11 +449,26 @@ header nav ul li a {
 ============= */
 #hero {
   margin-top: 100px;
+  color: var(--white);
 }
 #hero section h1 {
   font-size: 3.875rem;
   color: var(--white);
+  margin-top: 23px;
 }
-#hero section #hero-content p {
+#hero section #hero-title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#hero section p {
   font-size: 1.125rem;
+  color: var(--white);
+  margin-top: 18px;
+}
+#hero section #hero-btn {
+  margin-top: 20px;
+}
+#hero section #hero-btn li {
+  font-size: 1.25rem;
 }

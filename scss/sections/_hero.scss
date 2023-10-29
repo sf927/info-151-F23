@@ -3,21 +3,37 @@
 ============= */
 #hero{
    margin-top: 100px;
+   color: var(--white);
 
    section{
 
-    h1{
-        // font-family: 'PT Sans', sans-serif;
-        font-size: rem-calc(62);
-        color: var(--white);
-       }
+        h1{
+            // font-family: 'PT Sans', sans-serif;
+            font-size: rem-calc(62);
+            color: var(--white);
+            margin-top: 23px;
+        } 
 
+        #hero-title-top{
+            display: flex;  
+        }
 
-    #hero-content{
+        #hero-title-bottom{
+
+        }
+          
         p{
             font-size: rem-calc(18);
+            color: var(--white);
+            margin-top: 18px;
         }
-    }
+
+        #hero-btn{
+            margin-top: 20px;
+            li{
+                font-size: rem-calc(20);
+            }
+        }
 
    } 
    
