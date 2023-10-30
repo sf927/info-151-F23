@@ -9,11 +9,25 @@ button{
     color: var(--white);
     padding: 15px 30px;
     border-radius: 5px;
-    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #000;
+    margin-top: 20px;
+
 }
 .disabled-btn{
     background-color: var(--blueLight);
     color: var(--blue);
     padding: 15px 30px;
     border-radius: 5px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.8px;
+    margin-top: 20px;
 }

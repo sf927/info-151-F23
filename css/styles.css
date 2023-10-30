@@ -11,10 +11,10 @@ html {
     Variables
 ============= */
 :root {
-  --black: #00000010;
+  --black: #000000;
   --white: #ffffff;
   --linear: #5319A6;
-  --primary: #42B4EE;
+  --blue: #42B4EE;
   --light-blue: #8ED9FF;
 }
 
@@ -376,6 +376,18 @@ button {
   color: var(--white);
   padding: 15px 30px;
   border-radius: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  margin-top: 20px;
 }
 
 .disabled-btn {
@@ -383,6 +395,14 @@ button {
   color: var(--blue);
   padding: 15px 30px;
   border-radius: 5px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: 0.8px;
+  margin-top: 20px;
 }
 
 /* =============
@@ -417,35 +437,56 @@ textarea {
 /* =============
     Plans
 ============= */
-#plans #plans-intro {
+#plans {
   text-align: center;
-  margin: 108px 0 70px;
 }
-#plans #plans-intro h1 {
+#plans h1 {
   color: var(--black);
-  font-size: 3.6875rem;
-}
-#plans #plans-intro p {
-  color: var(--white);
+  font-size: 2.75rem;
+  color: var(--black);
   font-weight: 600px;
+  font-style: normal;
 }
-#plans section ul #li {
+#plans p {
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 33px */
+}
+#plans ul .plan-card {
   display: inline-block;
   margin-top: 60px;
-  border-radius: 14px;
-  border: 1px solid var(--black);
+  border-radius: 10px;
+  border: 1px solid var(--linear);
   padding: 90px;
 }
-#plans section ul #li img {
-  margin-bottom: 50px;
+#plans ul .plan-card h1 {
+  color: var(--Black, #051114);
+  text-align: center;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 57.2px */
+  margin-bottom: 40px;
 }
-#plans section ul #li h2 {
+#plans ul .plan-card img {
+  margin-bottom: 46px;
+}
+#plans ul .plan-card h2 {
   color: var(--black);
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
-#plans section ul #selected-card {
-  -webkit-box-shadow: 0px 30px 50px 0px rgba(83, 25, 166, 0.062745098);
-          box-shadow: 0px 30px 50px 0px rgba(83, 25, 166, 0.062745098);
-  border: 1px solid var(--linear);
+#plans ul .plan-card li {
+  list-style: none;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+}
+#plans ul #selected-card {
+  -webkit-box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+          box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+  border: 1px solid var(--linear) background color var(--white);
 }
