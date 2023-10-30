@@ -14,9 +14,11 @@ html {
   --black: #000000;
   --white: #ffffff;
   --linear: #5319A6;
-  --primary: #42B4EE;
+  --blue: #42B4EE;
   --light-blue: #8ED9FF;
   --gray: #696969;
+  --charcoal: #051114;
+  --blueLight: #42B4EE10;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -335,13 +337,17 @@ template {
 /* =============
     Base
 ============= */
-#validation-logo {
+#validation-btn {
   margin-top: 60px;
 }
 
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 h1, h2, h3, h4, h5 {
   margin: 0;
   padding: o;
@@ -360,11 +366,29 @@ ul {
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+}
+
 .black-btn {
-  background-color: var(--primary);
+  background-color: var(--blue);
   color: var(--white);
   padding: 20px 28px;
   border-radius: 6px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 56px;
+  padding: 15px 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
 }
 
 /* =============
@@ -397,34 +421,69 @@ textarea {
     Footer
 ============= */
 footer {
+  background-color: var(--black);
   color: var(--white);
+  padding: 100px 50px;
 }
 footer p {
-  color: var(--gray);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
 }
 footer #footer-top {
   background-color: var(--black);
   padding: 80px 0;
 }
-footer #footer-top section h2 {
-  margin-bottom: 10px;
-  margin-top: 20px;
+footer #footer-top h1 {
+  margin-bottom: 30px;
+  font-weight: 500;
 }
-footer #footer-top form {
-  padding: 9px;
-  background-color: var(--black);
-  border-color: var(--gray);
-  border-style: solid;
+footer #footer-top #icon li {
   display: inline-block;
-  border-radius: 6px;
 }
-footer #footer-top form input {
+footer #footer-top ul {
+  display: inline-block;
+}
+footer #footer-top ul li {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  list-style: none;
+}
+footer #footer-top #newsletter form {
+  display: inline-block;
   background-color: var(--black);
-  color: var(--gray);
+}
+footer #footer-top #newsletter form input {
+  border-right: none;
+  background-color: var(--black);
+  padding: 15px 30px;
+  border-radius: 1px 0px 0px 1px;
+  border-color: var(--black);
+}
+footer #footer-top #newsletter form button {
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 15px 30px;
+  margin-left: -3px;
+  border-radius: 0 5px 5px 0;
+}
+footer hr {
+  border: none;
+  background-color: var(--white);
+  height: 1px;
 }
 footer #footer-bottom {
-  background-color: var(--black);
-  padding: 30px 0;
+  color: var(--white);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* =============
