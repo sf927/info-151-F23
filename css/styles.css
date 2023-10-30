@@ -338,6 +338,10 @@ body {
   background-color: var(--white);
 }
 
+#validation-btn {
+  margin-top: 100px;
+}
+
 /* =============
     Typography
 ============= */
@@ -363,11 +367,18 @@ button {
   border: none;
 }
 
-.try-btn {
-  background-color: var(--primary);
-  color: var(--black);
-  padding: 20px 25px;
-  border-radius: 6px;
+.blue-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.disabled-btn {
+  background-color: var(--blueLight);
+  color: var(--blue);
+  padding: 15px 30px;
+  border-radius: 5px;
 }
 
 /* =============
@@ -400,30 +411,37 @@ textarea {
     Footer
 ============= */
 /* =============
-    How
+    Plans
 ============= */
-#how div h1 {
+#plans #plans-intro {
+  text-align: center;
+  margin: 108px 0 70px;
+}
+#plans #plans-intro h1 {
   color: var(--black);
+  font-size: 3.6875rem;
 }
-#how p {
-  color: var(--gray);
+#plans #plans-intro p {
+  color: var(--white);
+  font-weight: 600px;
 }
-#how ul li {
+#plans section ul #li {
   display: inline-block;
+  margin-top: 60px;
   border-radius: 14px;
-  background: rgb(247, 247, 251);
-  background: -webkit-gradient(linear, left top, right top, from(rgb(247, 247, 251)), color-stop(0%, rgba(6, 6, 64, 0.5)));
-  background: linear-gradient(90deg, rgb(247, 247, 251) 0%, rgba(6, 6, 64, 0.5) 0%);
-  padding: 1px;
+  border: 1px solid var(--black);
+  padding: 90px;
 }
-#how ul li div {
-  background-color: var(--white);
-  border-radius: 14px;
-  padding: 30px;
-}
-#how ul li div img {
+#plans section ul #li img {
   margin-bottom: 50px;
 }
-#how ul li div h2 {
+#plans section ul #li h2 {
   color: var(--black);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#plans section ul #selected-card {
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(83, 25, 166, 0.062745098);
+          box-shadow: 0px 30px 50px 0px rgba(83, 25, 166, 0.062745098);
+  border: 1px solid var(--linear);
 }

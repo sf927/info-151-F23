@@ -4,10 +4,16 @@
 button{
     border: none;
 }
-
-.try-btn{
-    background-color: var(--primary);
-    color: var(--black);
-    padding: 20px 25px;
-    border-radius: 6px;
+.blue-btn{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    
+}
+.disabled-btn{
+    background-color: var(--blueLight);
+    color: var(--blue);
+    padding: 15px 30px;
+    border-radius: 5px;
 }
