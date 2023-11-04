@@ -6,7 +6,7 @@ body{
 
     main{
         display: grid;
-        grid-template-columns: auto 1600px auto;
+        grid-template-columns: auto 1140px auto;
         grid-template-areas: ". main-grid-item .";
         #main-grid-item{
            grid-area: main-grid-item;
