@@ -1,10 +1,12 @@
 /* =============
     Hero
 ============= */
+
 #hero-content{
    margin-top: 100px;
    color: var(--white);
-
+   display: grid;
+    grid-template-columns: 33% auto;
    
 
         h1{
@@ -24,19 +26,31 @@
         }
           
         p{
-            font-size: rem-calc(18);
+            font-size: rem-calc(16);
             color: var(--white);
             margin-top: 18px;
+            
         }
 
         #hero-btn{
             margin-top: 20px;
+            list-style: none;
             li{
                 font-size: rem-calc(20);
             }
         }
 
   
-   
+   aside{
+        img{
+            width: 100%;
+            margin-top: -60px;
+            margin-left: 60px;
+        }
+   }
 
+}
+
+#validation-btn{
+    text-align: center;
 }

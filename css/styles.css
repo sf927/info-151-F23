@@ -478,6 +478,10 @@ header #logo-container {
 #hero-content {
   margin-top: 100px;
   color: var(--white);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% auto;
+  grid-template-columns: 33% auto;
 }
 #hero-content h1 {
   font-size: 3.125rem;
@@ -491,13 +495,23 @@ header #logo-container {
   display: flex;
 }
 #hero-content p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--white);
   margin-top: 18px;
 }
 #hero-content #hero-btn {
   margin-top: 20px;
+  list-style: none;
 }
 #hero-content #hero-btn li {
   font-size: 1.25rem;
+}
+#hero-content aside img {
+  width: 100%;
+  margin-top: -60px;
+  margin-left: 60px;
+}
+
+#validation-btn {
+  text-align: center;
 }
