@@ -3,9 +3,8 @@
 ============= */
 #plans{
 
-    
+    #plans-intro{
         text-align: center;
-        
         h1{
             color: var(--black);font-size: rem-calc(44);
             color: var(--black);
@@ -19,17 +18,19 @@
             font-weight: 500;
             line-height: 150%; /* 33px */ 
         }
+    }  
 
+    #main-ul{
         
-
-    ul{
-    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
         .plan-card{ 
             display: inline-block;
             margin-top: 60px;
             border-radius: 10px;
             border: 1px solid var(--linear);
-            padding: 90px;
+            padding: 50px;
             
             h1{
                 color: var(--Black, #051114);
@@ -55,17 +56,29 @@
                 font-weight: 400;
                 text-align: center;
                 font-size: 16px;
-
+               
+                
             }
             
             
         }
 
-        #selected-card{
+        #selected-card1{
             box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
             border: 1px solid var(--linear)
             background color var(--white);
         }
+        #selected-card2{
+            box-shadow: 0px 6px 50px 5px rgba(6, 14, 26, 0.05);
+            border: 1px solid var(--linear)
+            background color var(--white);
+        }
+        #selected-top{
+                background-image: url("../img/Vector5.svg");
+                background-size: cover;
+        }
     }
+
+    
 }
         
