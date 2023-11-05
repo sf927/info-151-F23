@@ -339,6 +339,7 @@ template {
 ============= */
 #validation-btn {
   margin-top: 60px;
+  text-align: center;
 }
 
 /* =============
@@ -414,6 +415,12 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray);
+}
+
 /* =============
     Header
 ============= */
@@ -426,26 +433,71 @@ footer {
   padding: 100px 50px;
 }
 footer p {
-  color: var(--white);
+  color: var(--gray);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+  padding-right: 100px;
+  margin-top: 20px;
 }
 footer #footer-top {
   background-color: var(--black);
   padding: 80px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1000px auto;
+  grid-template-columns: auto 1000px auto;
+      grid-template-areas: ". ftgi .";
 }
-footer #footer-top h1 {
+footer #footer-top #footer-top-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: ftgi;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto 25% auto;
+  grid-template-columns: 40% auto 25% auto;
+}
+footer #footer-top #footer-top-grid-item h1 {
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 400;
 }
-footer #footer-top #icon li {
+footer #footer-top #footer-top-grid-item #icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  padding-left: 1px;
+}
+footer #footer-top #footer-top-grid-item #icon li {
+  margin-right: 16px;
+  color: var(--gray);
+}
+footer #footer-top #footer-top-grid-item #icon li a:link, footer #footer-top #footer-top-grid-item #icon li a:visited {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--black);
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer #footer-top #footer-top-grid-item #icon li a:hover, footer #footer-top #footer-top-grid-item #icon li a:active {
+  background-color: var(--blue);
+  color: var(--gray);
+}
+footer #footer-top #footer-top-grid-item ul {
   display: inline-block;
 }
-footer #footer-top ul {
-  display: inline-block;
-}
-footer #footer-top ul li {
+footer #footer-top #footer-top-grid-item ul li {
   color: #FFF;
   font-family: Inter;
   font-size: 16px;
@@ -454,21 +506,32 @@ footer #footer-top ul li {
   line-height: 160%;
   list-style: none;
 }
-footer #footer-top #newsletter form {
-  display: inline-block;
+footer #footer-top #footer-top-grid-item section a:link, footer #footer-top #footer-top-grid-item section a:visited {
+  color: var(--gray);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin-bottom: 12px;
+}
+footer #footer-top #footer-top-grid-item section a:hover, footer #footer-top #footer-top-grid-item section a:active {
+  color: var(--blue);
+}
+footer #footer-top #footer-top-grid-item #newsletter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: var(--black);
 }
-footer #footer-top #newsletter form input {
+footer #footer-top #footer-top-grid-item #newsletter form input {
   border-right: none;
   background-color: var(--black);
-  padding: 15px 30px;
+  padding: 15px 15px;
   border-radius: 1px 0px 0px 1px;
   border-color: var(--black);
 }
-footer #footer-top #newsletter form button {
+footer #footer-top #footer-top-grid-item #newsletter form button {
   color: var(--white);
   background-color: var(--blue);
-  padding: 15px 30px;
+  padding: 15px 15px;
   margin-left: -3px;
   border-radius: 0 5px 5px 0;
 }
@@ -484,6 +547,7 @@ footer #footer-bottom {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  margin-top: 50px;
 }
 
 /* =============
