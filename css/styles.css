@@ -366,6 +366,14 @@ ul {
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 /* =============
     Forms
 ============= */
@@ -389,11 +397,16 @@ textarea {
 /* =============
     Navigation
 ============= */
+.showMainNav {
+  display: block !important;
+}
+
 a {
   text-decoration: none;
 }
 
-nav {
+#mainNav {
+  display: none;
   padding: 20px;
   margin-top: 15px;
   display: -webkit-box;
@@ -406,7 +419,7 @@ nav {
   font-size: 18px;
 }
 @media (min-width: 1200px) {
-  nav {
+  #mainNav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -419,7 +432,7 @@ nav {
             align-items: center;
   }
 }
-nav #sign {
+#mainNav #sign {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,7 +445,7 @@ nav #sign {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-nav #sign .sign-in {
+#mainNav #sign .sign-in {
   background-color: var(--hex);
   border-radius: 8px;
   color: var(--black);
@@ -443,7 +456,7 @@ nav #sign .sign-in {
   transition: 0.25s;
   cursor: pointer;
 }
-nav #sign .sign-out {
+#mainNav #sign .sign-out {
   background-color: var(--white);
   border-radius: 8px;
   color: var(--hex);
@@ -455,15 +468,15 @@ nav #sign .sign-out {
   transition: 0.25s;
   cursor: pointer;
 }
-nav #sign .sign-in:hover {
+#mainNav #sign .sign-in:hover {
   background-color: var(--white);
   color: var(--hex);
 }
-nav #sign .sign-out:hover {
+#mainNav #sign .sign-out:hover {
   background-color: var(--hex);
   color: var(--hex);
 }
-nav ul {
+#mainNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,7 +492,7 @@ nav ul {
           align-items: flex-end;
 }
 @media (min-width: 1200px) {
-  nav ul {
+  #mainNav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -492,7 +505,7 @@ nav ul {
             align-items: center;
   }
 }
-nav ul li a:link, nav ul li a:visited {
+#mainNav ul li a:link, #mainNav ul li a:visited {
   padding: 15px 25px 15px 25px;
   display: inline-block;
   margin: 2px;
@@ -500,7 +513,7 @@ nav ul li a:link, nav ul li a:visited {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-nav ul li a:hover, nav ul li a:active {
+#mainNav ul li a:hover, #mainNav ul li a:active {
   color: gray;
 }
 
@@ -517,9 +530,14 @@ header {
 }
 @media (min-width: 768px) {
   header {
-    -ms-grid-columns: 70% 30%;
-    grid-template-columns: 70% 30%;
-        grid-template-areas: "logo nav berger";
+    -ms-grid-columns: 55% 45%;
+    grid-template-columns: 55% 45%;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    -ms-grid-columns: 35% 65%;
+    grid-template-columns: 35% 65%;
   }
 }
 @media (min-width: 1200px) {
@@ -564,21 +582,6 @@ header nav {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: nav;
-}
-@media (min-width: 768px) {
-  header #logo-container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  header #berger-container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  header nav {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-  }
 }
 @media (min-width: 1200px) {
   header #logo-container {
