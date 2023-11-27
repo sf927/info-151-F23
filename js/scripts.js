@@ -2,9 +2,9 @@
 
 var mainNav = document.querySelector("#mainNav");
 
-var burgerBtn = document.querySelector("#berger-container button");
+var sign = document.querySelector("#sign");
 
-console.log(burgerBtn);
+var burgerBtn = document.querySelector("#berger-container button")
 
 var canYouSeeMainNav = false;
 
@@ -13,16 +13,21 @@ var canYouSeeMainNav = false;
 
 
 function showNav(){
-    console.log("button clicked");
+    //console.log("button clicked");
     if(canYouSeeMainNav === false){
         console.log("show menu");
         mainNav.classList.add("showMainNav");
+
+        sign.classList.add("showSign");
         canYouSeeMainNav = true;
 
     }else{
         console.log("hide menu");
         mainNav.classList.remove("showMainNav");
+        
+        sign.classList.remove("showSign");
         canYouSeeMainNav = false;
+        
     }
     
 }

@@ -14,6 +14,8 @@ html {
   --black: #000000;
   --white: #ffffff;
   --hex: #024A58;
+  --green: #024A58;
+  --gray: #74768F;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -368,10 +370,37 @@ ul {
 ============= */
 button {
   border: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
+  background-color: transparent;
+}
+
+.sign-in {
+  padding: 16px 24px;
+  background-color: var(--green);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.sign-in:hover {
+  background-color: var(--white);
+  color: var(--hex);
+}
+
+.sign-out {
+  border: 1px solid var(--green);
+  padding: 16px 24px;
+  background-color: var(--white);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--green);
+  border-radius: 8px;
+}
+
+.sign-out:hover {
+  background-color: var(--hex);
+  color: var(--hex);
 }
 
 /* =============
@@ -401,120 +430,64 @@ textarea {
   display: block !important;
 }
 
+.showSign {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 a {
   text-decoration: none;
 }
 
 #mainNav {
   display: none;
-  padding: 20px;
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 18px;
-}
-@media (min-width: 1200px) {
-  #mainNav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-#mainNav #sign {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 16px 24px;
-  gap: 10px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-#mainNav #sign .sign-in {
-  background-color: var(--hex);
-  border-radius: 8px;
-  color: var(--black);
-  padding: 16px;
-  font-weight: 400;
-  border: none;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  cursor: pointer;
-}
-#mainNav #sign .sign-out {
-  background-color: var(--white);
-  border-radius: 8px;
-  color: var(--hex);
-  padding: 16px;
-  border: 1px solid;
-  font-weight: 400;
-  border-color: var(--hex);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  cursor: pointer;
-}
-#mainNav #sign .sign-in:hover {
-  background-color: var(--white);
-  color: var(--hex);
-}
-#mainNav #sign .sign-out:hover {
-  background-color: var(--hex);
-  color: var(--hex);
-}
-#mainNav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 @media (min-width: 1200px) {
   #mainNav ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100%;
+  }
+}
+#mainNav ul li {
+  border-bottom: 1px solid var(--gray);
+  text-align: right;
+}
+@media (min-width: 1200px) {
+  #mainNav ul li {
+    border: none;
+    text-align: center;
   }
 }
 #mainNav ul li a:link, #mainNav ul li a:visited {
-  padding: 15px 25px 15px 25px;
-  display: inline-block;
-  margin: 2px;
-  color: black;
+  color: var(--gray);
+  font-size: 1.125rem;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  display: inline-block;
+  padding: 24px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  #mainNav ul li a:link, #mainNav ul li a:visited {
+    padding-bottom: 0;
+  }
 }
 #mainNav ul li a:hover, #mainNav ul li a:active {
-  color: gray;
+  color: var(--green);
 }
 
 /* =============
@@ -524,43 +497,78 @@ header {
   padding: 12px 24px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-  grid-template-columns: 50% 50%;
-      grid-template-areas: "logo berger" "nav nav";
+  -ms-grid-columns: 50% auto;
+  grid-template-columns: 50% auto;
+      grid-template-areas: "logo berger" "nav nav" "sign sign";
+  height: 100%;
 }
 @media (min-width: 768px) {
   header {
-    -ms-grid-columns: 55% 45%;
-    grid-template-columns: 55% 45%;
-  }
-}
-@media (min-width: 1024px) {
-  header {
-    -ms-grid-columns: 35% 65%;
-    grid-template-columns: 35% 65%;
+    -ms-grid-columns: 40% 50% auto;
+    grid-template-columns: 40% 50% auto;
+        grid-template-areas: "logo signIn burger" "nav nav nav";
   }
 }
 @media (min-width: 1200px) {
   header {
-    -ms-grid-columns: 30% 70%;
-    grid-template-columns: 30% 70%;
-        grid-template-areas: "logo nav";
+    -ms-grid-columns: 25% auto 25%;
+    grid-template-columns: 25% auto 25%;
+        grid-template-areas: "logo nav signIn ";
   }
 }
 header #logo-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  grid-area: logo;
+  padding: 24px 0 0px 24px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-area: logo;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-header #berger-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+header nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+}
+header #sign {
+  display: none;
+  grid-area: signIn;
+  padding: 21px 24px;
+}
+@media (min-width: 768px) {
+  header #sign {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  header #sign {
+    padding-right: 24px;
+  }
+}
+header #sign button {
+  margin-left: 16px;
+}
+header #burger-container {
+  grid-area: burger;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,18 +578,30 @@ header #berger-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-area: berger;
+  padding-top: 24px;
+  padding-right: 24px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-@media (min-width: 1200px) {
-  header #berger-container {
-    display: none;
+@media (min-width: 768px) {
+  header #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
-}
-header nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: nav;
+  header nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  header #sign {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  header #burger-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
 }
 @media (min-width: 1200px) {
   header #logo-container {
@@ -593,6 +613,18 @@ header nav {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
   }
+  header #sign {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+@media (min-width: 1200px) {
+  header #burger-container {
+    display: none;
+  }
+}
+header #burger-container button {
+  color: var(--black);
 }
 
 /* =============
@@ -602,8 +634,8 @@ header nav {
     Hero
 ============= */
 #hero {
-  background-image: url(../img/hero.jpg);
+  background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 80vh;
 }
