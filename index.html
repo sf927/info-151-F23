@@ -4,46 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7ab68a398d.js" crossorigin="anonymous"></script>
 
-    <script src="https://kit.fontawesome.com/557b3505f9.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
-    <title>week 7 step1</title>
+    <title>Week 8 Modals</title>
 </head>
 
 <body>
-    <section id="signUp">
+    
+    <section id="sign-in-container">
         <form action="#">
-            <input type="text" placeholder="User-Name">
-            <input type="text" placeholder="Password">
-            <button>Sign In</button>
+            <div id="close-button-container">
+                <button class="close-btn" id="close-sign-up-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <input type="text" placeholder="User Name"> 
+            <input type="text" placeholder="Password"> 
+            <div id="sign-in-button-container">
+                <button class="white-btn">Sign In</button>
+            </div>
+            
         </form>
-
+    </section>
+    
+    <section id="signUpModal-container" class="hide-signUpModal-container">
+        <form action="#">
+            <div id="close-signUpModal-btn-container">
+                <button class="close-btn" id="close-signUp-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="State">
+            <input type="text" placeholder="Zip Code">
+            <input type="text" placeholder="Phone Number">
+            <input type="email" placeholder="Email">
+            <div id="signUp-btn-container">
+                <button>Send</button>
+                <button class="cancel-btn" id="cancel-signUp-modal-btn">Cancel</button>
+            </div>
+        </form>
     </section>
     <header>
+
         <section id="logo-container">
-            <img src="img/logo.svg" alt="logo for website">
+            <img src="img/logo.svg" alt="waterdrop logo">
         </section>
-        
-        <nav id="mainNav">
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Impact</a></li>
-                    <li><a href="#">Location</a></li>
-                    
-                </ul>       
+
+        <nav id="main-nav">
+            <ul>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Impact</a>
+                </li>
+                <li>
+                    <a href="#">Locations</a>
+                </li>
+            </ul>
         </nav>
-        <sectiion id="sign">
-                    <button class="sign-in">Sign In</button>
-                    <button class="sign-out">Sign up</button>
+
+        <section id="sign-in-up-buttons">
+            <button class="green-btn" id="sign-in-btn">Sign In</button>
+            <button class="white-btn">Sign Up</button>
         </section>
-        
-        <section id="berger-container">
-            <button><i class="fa-solid fa-bars"></i></button>
+
+        <section id="burger-container">
+            <button>
+                <i class="fa-solid fa-bars" id="burger-bars"></i>
+                <i class="fa-solid fa-xmark hide-burger-x" id="burger-x"></i>
+            </button>
             
         </section>
 
     </header>
+
     <section id="hero">
 
     </section>
@@ -60,3 +104,7 @@
 </body>
 
 </html>
+
+
+
+    

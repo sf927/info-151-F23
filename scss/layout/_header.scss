@@ -2,13 +2,13 @@
     Header
 ============= */
 header{
-    padding: 12px 24px;
+
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: 
-    "logo berger"
+    "logo burger"
     "nav nav"
-    "sign sign";
+    "signIn signIn";
     height: 100%;
 
     @include md{
@@ -18,13 +18,12 @@ header{
         "nav nav nav";
     }
 
-
     @include xl{
         grid-template-columns: 25% auto 25%;
         grid-template-areas: 
         "logo nav signIn ";
     }
-    
+
     #logo-container{
         grid-area: logo;
         padding: 24px 0 0px 24px;
@@ -34,12 +33,11 @@ header{
         box-sizing: border-box;
     }
 
-    nav{
+    #main-nav{
         grid-area: nav;
-        
     }
-    
-    #sign{
+
+    #sign-in-up-buttons{
 
         display: none;
         grid-area: signIn;
@@ -82,7 +80,4 @@ header{
             color: var(--black);
         }
     }
-    
-    
 }
-

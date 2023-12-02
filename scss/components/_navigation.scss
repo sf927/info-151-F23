@@ -1,11 +1,17 @@
 /* =============
     Navigation
 ============= */
+
 .showMainNav{
     display: block !important;
 }
 
-.showSign{
+.showSignIn{
+    display: flex !important;
+    justify-content: flex-end;
+}
+
+.showsignUpModalcontainer{
     display: flex !important;
     justify-content: flex-end;
 }
@@ -14,8 +20,12 @@ a{
     text-decoration: none;
 }
 
-#mainNav{
+#main-nav{
     display: none;
+
+    @include xl{
+        display: block;
+    }
 
     ul{
 
