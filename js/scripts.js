@@ -101,8 +101,4 @@ signUpBtn.addEventListener("click", showSignUpModal);
 closeSignUpModalBtn.addEventListener("click", hideSignUpModal);
 
 
-signUpContainer.addEventListener("click", function (event) {
-    if (event.target.id === "sign-up-container") {
-        hideSignUpModal();
-    }
-});
+signUpContainer.addEventListener("click", hideSignUpModal);
