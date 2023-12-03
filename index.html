@@ -31,25 +31,28 @@
             
         </form>
     </section>
-    
-    <section id="signUpModal-container" class="hide-signUpModal-container">
+
+    <!-- Add this within the <body> tag of your HTML -->
+    <section id="sign-up-container">
         <form action="#">
-            <div id="close-signUpModal-btn-container">
-                <button class="close-btn" id="close-signUp-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div id="close-button-container-sign-up">
+                <button class="close-btn" id="close-sign-up-modal-btn"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <input type="text" placeholder="First Name">
             <input type="text" placeholder="Last Name">
             <input type="text" placeholder="Address">
             <input type="text" placeholder="State">
             <input type="text" placeholder="Zip Code">
-            <input type="text" placeholder="Phone Number">
+            <input type="tel" placeholder="Phone Number">
             <input type="email" placeholder="Email">
-            <div id="signUp-btn-container">
-                <button>Send</button>
-                <button class="cancel-btn" id="cancel-signUp-modal-btn">Cancel</button>
+            <div id="sign-up-button-container">
+                <button>send</button>
+                <button id="cancel-sign-up-btn">Cancel</button>
             </div>
-        </form>
+            </form>
     </section>
+        
+
     <header>
 
         <section id="logo-container">
@@ -75,7 +78,7 @@
 
         <section id="sign-in-up-buttons">
             <button class="green-btn" id="sign-in-btn">Sign In</button>
-            <button class="white-btn">Sign Up</button>
+            <button class="white-btn" id="sign-up-btn">Sign Up</button>
         </section>
 
         <section id="burger-container">

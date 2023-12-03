@@ -346,6 +346,12 @@ template {
   display: flex !important;
 }
 
+.show-signUn-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .hide-burger-x {
   display: none !important;
 }
@@ -463,15 +469,6 @@ textarea {
 }
 
 .showSignIn {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.showsignUpModalcontainer {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -741,7 +738,7 @@ header #burger-container button {
   border: none;
   border-radius: 8px;
 }
-#sign-in-container form #final-button-container {
+#sign-in-container form #sign-in-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,38 +746,45 @@ header #burger-container button {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-#sign-in-container form #final-button-container button {
+#sign-in-container form #sign-in-button-container button {
   background-color: var(--greenLight);
   color: var(--white);
   border: 1px solid var(--white);
   margin-left: 16px;
 }
 
-#signUpModal-container {
-  background-color: rgba(2, 74, 88, 0.8);
+/* =============
+    Sign Up
+============= */
+#sign-up-container {
+  background-color: rgba(2, 74, 88, 0.7019607843);
   height: 100vh;
   padding: 16px;
   position: fixed;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-top: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
   display: none;
 }
-#signUpModal-container form {
+#sign-up-container form {
   background-color: rgba(2, 74, 88, 0.8);
   padding: 24px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
+  width: 50%;
 }
-#signUpModal-container form #close-signUpModal-btn-container {
+#sign-up-container form #close-button-container-sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,7 +793,7 @@ header #burger-container button {
           justify-content: flex-end;
   margin-bottom: 24px;
 }
-#signUpModal-container form input {
+#sign-up-container form input {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -798,18 +802,17 @@ header #burger-container button {
   border: none;
   border-radius: 8px;
 }
-#signUpModal-container form #signUp-btn-container {
+#sign-up-container form #sign-up-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-#signUpModal-container form #signUp-btn-container button {
-  width: 48%;
-  background-color: var(--lightgreen);
+#sign-up-container form #sign-up-button-container button {
+  background-color: var(--greenLight);
   color: var(--white);
-  border: 1px solid --white;
-  border-radius: 8px;
+  border: 1px solid var(--white);
+  margin-left: 16px;
 }

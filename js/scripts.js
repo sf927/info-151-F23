@@ -80,28 +80,29 @@
   signInContainer.addEventListener("click", hideSignInModal);
 
 
-
-  // Add the following JavaScript code to your existing scripts-dist.js file
-
-var signUpBtn = document.querySelector(".sign-out");
-var signUpModalContainer = document.querySelector("#signUpModal-container");
-var closeSignUpModalBtn = document.querySelector("#close-signUp-modal-btn");
-var cancelSignUpModalBtn = document.querySelector("#cancel-signUp-modal-btn");
+ /* --------------------
+    Sign Up
+ -------------------- */
+var signUpBtn = document.querySelector("#sign-up-btn");
+var signUpContainer = document.querySelector("#sign-up-container");
+var closeSignUpModalBtn = document.querySelector("#close-sign-up-modal-btn");
 
 function showSignUpModal() {
-    signUpModalContainer.classList.add("showsignUpModalcontainer");
-    mainNav.classList.add("showMainNav");
+    signUpContainer.classList.add("show-sign-up-container");
+    mainNav.classList.remove("showMainNav");
+    signInUpButtons.classList.remove("showSignIn");
 }
 
 function hideSignUpModal() {
-    signUpModalContainer.classList.remove("showsignUpModalcontainer");
-    mainNav.classList.remove("showMainNav");
+    signUpContainer.classList.remove("show-sign-up-container");
 }
 
 signUpBtn.addEventListener("click", showSignUpModal);
 closeSignUpModalBtn.addEventListener("click", hideSignUpModal);
-cancelSignUpModalBtn.addEventListener("click", hideSignUpModal);
-signUpModalContainer.addEventListener("click", hideSignUpModal);
 
-  
- 
+
+signUpContainer.addEventListener("click", function (event) {
+    if (event.target.id === "sign-up-container") {
+        hideSignUpModal();
+    }
+});
