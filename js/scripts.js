@@ -1,5 +1,4 @@
-Fancybox.bind()
-
+Fancybox.bind();
 
 const container = document.getElementById("myCarousel");
 const options = { infinite: false };
