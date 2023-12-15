@@ -13,6 +13,8 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --blue: #42B4EE;
+  --linear: #461096;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -331,12 +333,60 @@ template {
 /* =============
     Base
 ============= */
+body {
+  background-color: var(--linear);
+}
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". main-grid-item .";
+}
+body main #main-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main-grid-item;
+}
+
+#validation-btn {
+  margin-top: 100px;
+}
+
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.blue-buttom {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
 /* =============
     Forms
 ============= */
@@ -360,9 +410,108 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav ul li {
+  list-style: none;
+  margin-left: 28px;
+}
+nav ul li a:link, nav ul li a:visited {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 300;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+nav ul li a:hover, nav ul li a:active {
+  color: var(--blue);
+}
+nav ul li a.selected {
+  color: var(--blue);
+}
+nav ul #trial-btn {
+  margin-left: auto;
+}
+
 /* =============
     Header
 ============= */
+header {
+  margin-bottom: 70px;
+  padding: 22px;
+  border-radius: 6px;
+  margin-top: 59px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+  grid-template-columns: 40% auto;
+}
+header #logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* =============
     Footer
 ============= */
+/* =============
+    Hero
+============= */
+#hero-content {
+  margin-top: 100px;
+  color: var(--white);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% auto;
+  grid-template-columns: 33% auto;
+}
+#hero-content h1 {
+  font-size: 3.125rem;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 120%;
+}
+#hero-content #hero-title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#hero-content p {
+  font-size: 1rem;
+  color: var(--white);
+  margin-top: 18px;
+}
+#hero-content #hero-btn {
+  margin-top: 20px;
+  list-style: none;
+}
+#hero-content #hero-btn li {
+  font-size: 1.25rem;
+}
+#hero-content aside img {
+  width: 100%;
+  margin-top: -60px;
+  margin-left: 60px;
+}
+
+#validation-btn {
+  text-align: center;
+}

@@ -1,3 +1,17 @@
 /* =============
     Buttons
 ============= */
+button{
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+.blue-buttom{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: rem-calc(20);
+}

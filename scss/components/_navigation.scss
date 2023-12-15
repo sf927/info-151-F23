@@ -1,3 +1,42 @@
 /* =============
     Navigation
 ============= */
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav{
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    
+        li{
+            list-style: none;
+            margin-left: 28px;
+            a:link, a:visited{
+                color: var(--white);
+                font-size: rem-calc(18);
+                font-weight: 300;
+                transition: 0.25s;
+            }
+
+            a:hover,a:active{
+                color: var(--blue);
+            }
+            
+            a.selected{
+                color: var(--blue);
+            }
+        }
+
+        #trial-btn{
+            margin-left: auto;
+        }
+    
+        
+
+    }
+}
